@@ -21,13 +21,6 @@ sent = False
 received_msg = None
 sent_msg = None
 
-def count_blank(s):
-    count = 0
-    for l in s:
-        if l==' ':
-            count+=1
-    return count
-
 def mapper(v):
     if v in PAPERS:
         return 'P'
@@ -40,8 +33,6 @@ def mapper(v):
 def listen(client):
     global sent, received, received_msg, sent_msg
     from_server = client.recv(BYTE_SIZE).decode(FORMAT)
-    count = count_blank(from_server)
-    #print('what ',from_server)
     if not from_server=='' and not 'USER' in from_server:
         if received:
             return
