@@ -1,0 +1,12 @@
+[ROCK/PAPER/SCISSORS network game using python's socket module]
+
+Usage:
+
+[1] Establish server connection.
+python server.py your_port_number
+
+[2] Using two different terminal windows, connect two clients to the server.
+python client.py same_port_number_used_for_server
+
+To quit the game (from client's side), type "quit".
+ 
